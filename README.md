@@ -22,3 +22,6 @@ Program demonstracyjny będzie napisany w języku Rust w oparciu o silnik Bevy.
 | Gra renderowana przy użyciu WebGPU2 | /game/wgpu |
 
 Jeśli program będzie wspierał dodatkowe argumenty będą one identyczne dla obu endpointów
+
+## Postęp projektu
+- Commit 1 - Program testowy działa w środowisku testowym po skompilowaniu do WASM z backendem graficznym WebGL2
