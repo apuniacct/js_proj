@@ -24,6 +24,8 @@ Program demonstracyjny będzie napisany w języku Rust w oparciu o silnik Bevy.
 Jeśli program będzie wspierał dodatkowe argumenty będą one identyczne dla obu endpointów
 
 ## Postęp projektu
-### Commit 1 
-- Program testowy działa w środowisku testowym po skompilowaniu do WASM z backendem graficznym WebGL2
+### Commit 1
+- Program testowy gry silnika Bevy działa w środowisku testowym po skompilowaniu do WASM z backendem graficznym WebGL2
+- Implementacja ruchu za pomocą odgórnie wpisanych klawiszy przy użyciu impulsów fizycznych, oparta na silniku fizycznym bevy_avian
+- Prosta wizualizacja prędkości wypadkowej gracza i obliczonego przyspieszenia
 - Backend/frontend niezbudowany, program uruchamia się w minimalnym środowisku serwera wasm-server-runner
