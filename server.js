@@ -5,10 +5,13 @@ const app = express();
 app.use(express.static("public"))
 app.set('view engine', 'ejs')
 
+//var GameInit = require("./public/game/game")
+
 //const wasmFile = 'game/game_bg.wasm'; // Update this to your WASM module's path
 
 app.get('/', (req, res) => {
-  res.render("index")
+
+  res.render("index"/*, { id }*/)
 
   /*
   WebAssembly.instantiateStreaming(fetch("game/game_bg.wasm"), ).then(
@@ -26,7 +29,11 @@ app.get('/', (req, res) => {
   //});
   //res.sendFile(path.join(__dirname, './game/index.html'));
   */
+
 });
+
+app.get('/hi', (req, res) => {
+})
 
 
 const port = 3000;
