@@ -2,39 +2,17 @@ const express = require('express');
 
 const app = express();
 
+// Declare the public directory as static
 app.use(express.static("public"))
+
+// Choose ejs as the serverside render engine
 app.set('view engine', 'ejs')
 
-//var GameInit = require("./public/game/game")
-
-//const wasmFile = 'game/game_bg.wasm'; // Update this to your WASM module's path
-
+// Use the root endpoint for simplicity
 app.get('/', (req, res) => {
-
-  res.render("index"/*, { id }*/)
-
-  /*
-  WebAssembly.instantiateStreaming(fetch("game/game_bg.wasm"), ).then(
-  
-  
-    (obj) => {
-      
-    }
-  );
-  //const loader = new WasmLoader();
-  //loader.load(wasmFile).then((module) => {
-    // Call a function in your WASM module...
-    //module.exports.gameStart();
-    //res.send('Game started!');
-  //});
-  //res.sendFile(path.join(__dirname, './game/index.html'));
-  */
-
+    // Render the .ejs file
+    res.render("index")
 });
-
-app.get('/hi', (req, res) => {
-})
-
 
 const port = 3000;
 app.listen(port, () => {

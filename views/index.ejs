@@ -1,19 +1,25 @@
 <!doctype html>
 <html lang="en">
-
-<body style="margin: 0px;">
-  <script type="module">
-    
-    import init from '../game/game.js'
-
-
-    init().catch((error) => {
-      if (!error.message.startsWith("Using exceptions for control flow, don't mind me. This isn't actually an error!")) {
-        throw error;
-      }
-    });
-    
-  </script>
-</body>
+    <body style="
+        margin: 0px;
+        height: 100%;
+        width: 100%;
+    ">
+        <script type="module">
+        
+        /*
+            The hooks file preallocates memory ranges and defines interfaces for the functions contained within the compiled .wasm binary.
+            The init() function is used to run those hooks and start the main() function.
+        */
+        import init from '../game/game.js'
+        
+        // Run the init function
+        init().catch((error) => {
+            if (!error.message.startsWith("Using exceptions for control flow, don't mind me. This isn't actually an error!")) {
+                throw error;
+            }
+        });
+        </script>
+    </body>
 
 </html>
