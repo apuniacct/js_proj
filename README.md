@@ -16,8 +16,8 @@ Aby uruchomić projekt należy:
 2) Pobrać repozytorium główne
 3) Zamieścić uzyskane pliki .wasm i .js w folderze `public/game/` - plik z wygenerowanymi bindingami .js powinien mieć nazwę `game.js`, nazwa pliku wasm powinna zostać bez zmian (podstawowo `game_bg.wasm`).
 4) Wejść do folderu projektu i uruchomić komendę `npm install` w celu pobrania brakujących paczek
-5) komenda `npm run DevStart` uruchamia serwer (podstawowo na porcie 3000)
-6) Wejście na stronę localhost:PORT powinno pokazać grę testową działającą w oknie przeglądarki
+5) komenda `npm run DevStart` uruchamia serwer (podstawowo na porcie 3000, port można zmienić w pliku `server.js`)
+6) Wejście na stronę `localhost:PORT/` powinno pokazać grę testową działającą w oknie przeglądarki
 
 ## Opis implementacji
 ### Zarys backendu/frontendu
@@ -33,8 +33,9 @@ Aby uruchomić projekt należy:
 | Użycie tylko WebGL *lub* WebGPU | Jednoczesne wsparcie dla WebGL *i* WebGPU, ~~wybór za pomocą argumentów lub endpointów~~ - Oba interfejsy działają**
 | Implementacja ładowania programu WASM | ~~Napisanie demo używającego opcjonalnych argumentów do zmiany ustawień~~ - przekazywanie argumentów dla programów wasm jest nietrywialnym procesem
 
-* Mimo braku dogłębnego programu testowego projekt był w stanie uruchomić znacznie bardziej rozbudowany program silnika Bevy.
-** Użycie WebGPU wymaga kompilacji z dodatkową flagą silnika. Renderowanie WebGPU jest eksperymentalne w większości przeglądarek - włączenie wsparcia WebGPU może w tych wypadkach potencjalnie odsłonić luki w zabezpieczeniach.
+\* Mimo braku dogłębnego programu testowego projekt był w stanie uruchomić znacznie bardziej rozbudowany program silnika Bevy.
+
+\** Użycie WebGPU wymaga kompilacji z dodatkową flagą silnika. Renderowanie WebGPU jest eksperymentalne w większości przeglądarek - włączenie wsparcia WebGPU może w tych wypadkach potencjalnie odsłonić luki w zabezpieczeniach.
 
 ### Endpointy
 | Funkcja | Endpoint |
